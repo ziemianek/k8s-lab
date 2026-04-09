@@ -1,0 +1,33 @@
+debug:
+  enabled: true
+
+ipam:
+  mode: "kubernetes"
+
+kubeProxyReplacement: true
+
+# k8sServiceHost: "auto"
+
+hostServices:
+  enabled: true
+
+nodeinit:
+  enabled: true
+
+hubble:
+  enabled: true
+  relay:
+    enabled: true
+  ui:
+    enabled: true
+
+# ❯ helm install cilium cilium/cilium \
+#   --namespace kube-system \
+#   --set ipam.mode=kubernetes \
+#   --set hostServices.enabled=false \
+#   --set externalIPs.enabled=true \
+#   --set nodeinit.enabled=true \
+#   --set kubeProxyReplacement=true \
+#   --set hubble.enabled=true \
+#   --set hubble.relay.enabled=true \
+#   --set hubble.ui.enabled=true
