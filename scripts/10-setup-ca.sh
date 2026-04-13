@@ -1,6 +1,8 @@
 #/bin/bash
 set -euo pipefail
 
+# Run only if deployed cluster behind proxy
+
 # cluster name is first argument or "" (kind) if argument not provided
 CLUSTER_NAME=${1:-""}
 
